@@ -1,0 +1,28 @@
+-- Create a grocery store database.
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, product TEXT, section TEXT, price INTEGER, inventory_status TEXT);
+
+INSERT INTO store VALUES (1, 'potato chips', 'snack', 1.99, 'in stock');
+INSERT INTO store VALUES (2,'cookies', 'snack', 2.99, 'in stock');
+INSERT INTO store VALUES (3, 'grapes', 'produce', 3.99, 'out of stock');
+INSERT INTO store VALUES (4, 'apple', 'produce', 0.99, 'in stock');
+INSERT INTO store VALUES (5, 'deodorant', 'hygiene', 4.99, 'out of stock');
+INSERT INTO store VALUES (6, 'toothpaste', 'hygiene', 1.99, 'in stock');
+INSERT INTO store VALUES (7, 'ham', 'deli', 5.99, 'out of stock');
+INSERT INTO store VALUES (8, 'beef', 'deli', 7.99, 'out of stock');
+INSERT INTO store VALUES (9, 'ice cream', 'frozen', 4.99, 'in stock');
+INSERT INTO store VALUES (10, 'sherbert', 'frozen', 3.99, 'in stock');
+INSERT INTO store VALUES (11, 'sports drink', 'beverages', 2.99, 'out of stock');
+INSERT INTO store VALUES (12, 'soda', 'beverages', 6.99, 'in stock');
+INSERT INTO store VALUES (13, 'gum', 'candy', 1.99, 'out of stock');
+INSERT INTO store VALUES (14, 'chocolate bar', 'candy', 0.99, 'in stock');
+INSERT INTO store VALUES (15, 'taffy', 'candy', 0.99, 'out of stock');
+
+-- Display database ordered by price
+SELECT * FROM store
+ORDER BY price DESC;
+
+-- What is the average price of products in candy section
+SELECT AVG(price) "average candy product price"
+FROM store
+WHERE section='candy';
