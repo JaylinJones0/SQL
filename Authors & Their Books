@@ -1,0 +1,52 @@
+-- Create a two tables, one for authors, and the other for the books they have written.
+
+-- Table 1, "authors"
+
+CREATE TABLE authors (id INTEGER PRIMARY KEY, name TEXT);
+
+INSERT INTO authors VALUES (1, 'Armando Lucas Correa');
+INSERT INTO authors VALUES (2, 'Jess Kidd');
+INSERT INTO authors VALUES (3, 'Martha McPhee');
+INSERT INTO authors VALUES (4, 'Megan Miranda');
+INSERT INTO authors VALUES (5, 'Helen Phillips');
+INSERT INTO authors VALUES (6, 'Kristin Harmel');
+INSERT INTO authors VALUES (7, 'Karen Kingsbury');
+INSERT INTO authors VALUES (8, 'Rebecca Serle');
+INSERT INTO authors VALUES (9, 'Sally Rooney');
+INSERT INTO authors VALUES (10, 'Lisa Jewell');
+INSERT INTO authors VALUES (11, 'Haruki Murakami');
+INSERT INTO authors VALUES (12, 'Kiley Reid');
+INSERT INTO authors VALUES (13, 'Imbolo Mbue');
+INSERT INTO authors VALUES (14, 'Terry McMillan');
+INSERT INTO authors VALUES (15, 'Mary Kubica');
+
+
+-- Table 2, "books"
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT);
+
+INSERT INTO books VALUES (1, "The Daughter's Tale");
+INSERT INTO books VALUES (2, 'Himself');
+INSERT INTO books VALUES (3, 'Gorgeous Lies');
+INSERT INTO books VALUES (4, 'All the Missing Girls');
+INSERT INTO books VALUES (5, 'The Beautiful Bureaucrat');
+INSERT INTO books VALUES (6, "The Winemaker's Wife");
+INSERT INTO books VALUES (7, 'Love Story');
+INSERT INTO books VALUES (8, 'The Dinner List');
+INSERT INTO books VALUES (9, 'Normal People');
+INSERT INTO books VALUES (10, 'The Family Upstairs');
+INSERT INTO books VALUES (11, 'Kafka on the Shore');
+INSERT INTO books VALUES (12, 'Such a Fun Age');
+INSERT INTO books VALUES (13, 'Behold the Dreamers');
+INSERT INTO books VALUES (14, 'How Stella Got Her Groove Back');
+INSERT INTO books VALUES (15, 'The Good Girl');
+
+
+-- From the two tables you created, display which author wrote each book. Have the books column displayed as "book written."
+
+SELECT authors.name 
+AS 'author', books.name 
+AS 'books written'  
+FROM authors
+JOIN books books
+ON authors.id=books.id;
