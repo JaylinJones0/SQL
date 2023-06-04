@@ -28,3 +28,12 @@ FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
 WHERE type='Movie'
 ORDER BY release_year ASC
 LIMIT 1;
+
+-- OR
+
+SELECT title, release_year 
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type = 'Movie'
+AND release_year <= (SELECT MIN(release_year) 
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type = 'Movie');
