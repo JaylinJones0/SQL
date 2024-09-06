@@ -1,4 +1,4 @@
--- The downloaded a database and selected interesting questions to answer about the data.
+-- I downloaded a database and selected interesting questions to answer about the data.
 -- The following are the questions and the SQL I used to answer those questions:
 
 -- Show Customers (their full names, customer ID, and country) who are not in the US.
